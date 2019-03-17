@@ -1,0 +1,4 @@
+02/27/17:MM/dd/yy
+June 2, 2018:MMMM dd, yyyy
+Jul-13-2016:MMM-dd-yyyy
+April 31, 2018:MMMMM dd, yyyy
