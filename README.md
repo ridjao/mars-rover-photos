@@ -13,7 +13,7 @@ This repo currently has 2 projects:
 
 It accepts a configuration file that specifies a list of dates to query. Each line in the text file is of the form:
 
-`date:date format`
+`<date>:[date format]`
 
 Here's an example of a valid configuration file.
 
@@ -21,6 +21,8 @@ Here's an example of a valid configuration file.
 >June 2, 2018:MMMM dd, yyyy  
 >Jul-13-2016:MMM-dd-yyyy  
 >April 31, 2018:MMMMM dd, yyyy  
+
+If the date format is not specified, it is assumed to be **yyyy-MM-dd**.
 
 `Example: java -jar rover-image-retriever.jar dates.txt curiosity`
 

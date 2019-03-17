@@ -25,10 +25,12 @@ public class ImageRetrieverConfig {
 					continue;
 				
 				String[] fields = line.split(":");
-				if (fields.length < 2)
-					throw new Exception("Invalid line [" + line + "] in config file");
+				String date = fields[0].trim();
+				String format = "yyyy-MM-dd";
+				if (fields.length > 1)
+					format = fields[1].trim();
 				
-				dates.add(new SimpleDateFormat(fields[1].trim()).parse(fields[0].trim()));
+				dates.add(new SimpleDateFormat(format).parse(date));
 			} 
 		} finally {
 			if (reader != null)

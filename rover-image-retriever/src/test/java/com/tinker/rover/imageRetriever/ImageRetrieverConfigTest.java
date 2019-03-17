@@ -26,18 +26,20 @@ class ImageRetrieverConfigTest {
 					"Jul-13-2016:MMM-dd-yyyy",
 					"",
 					"April 31, 2018:MMMMM dd, yyyy",
+					"2015-06-03",
 					null);
 		}};
 		
 		List<Date> dates = config.getDates();
 		
-		assertEquals(dates.size(), 4);
+		assertEquals(dates.size(), 5);
 
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		assertEquals(formatter.parse("2017-02-27"), dates.get(0)); //02/27/17
 		assertEquals(formatter.parse("2018-06-02"), dates.get(1)); //June 2, 2018
 		assertEquals(formatter.parse("2016-07-13"), dates.get(2)); //Jul-13-2016
 		assertEquals(formatter.parse("2018-04-31"), dates.get(3)); //April 31, 2018 => May 1, 2018
+		assertEquals(formatter.parse("2015-06-03"), dates.get(4)); //2015-06-03
 	}
 
 }
